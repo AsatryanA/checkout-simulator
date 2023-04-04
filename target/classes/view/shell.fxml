@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="controller.ShellController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="File">
+                <MenuItem mnemonicParsing="false" text="Close"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem mnemonicParsing="false" text="About"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TabPane fx:id="stepTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE"
+                 BorderPane.alignment="CENTER">
+
+            <Tab text="Կարգավորումներ" style="-fx-font-family: 'Arial AMU'"    fx:id="preferencesTab">
+                <AnchorPane fx:id="preferenceContainer"/>
+                            </Tab>
+            <Tab text="Սիմուլյացիա" style="-fx-font-family: 'Arial AMU'" fx:id="simulationTab">
+                <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <AnchorPane fx:id="mainContainer"/>
+                    <AnchorPane fx:id="sideContainer" maxWidth="500.0" minWidth="240.0" prefWidth="300.0"/>
+                </SplitPane>
+            </Tab>
+            <Tab text="Վիճակագրություն" style="-fx-font-family: 'Arial AMU'" fx:id="statisticsTab">
+                <AnchorPane fx:id="statisticsContainer"/>
+            </Tab>
+
+        </TabPane>
+    </center>
+</BorderPane>

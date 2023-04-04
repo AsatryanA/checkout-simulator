@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/10.0.1"
+      fx:controller="controller.SimulatorController">
+    <ButtonBar prefHeight="40.0" style="-fx-padding: 5">
+        <buttons>
+            <Button fx:id="startButton" maxWidth="100" text="Սկսել" style="-fx-font-family: 'Arial AMU'" ButtonBar.buttonData="LEFT"/>
+            <Button fx:id="shutButton" maxWidth="100" text="Ավարտ" style="-fx-font-family: 'Arial AMU'" ButtonBar.buttonData="LEFT"/>
+            <Button fx:id="resetButton" maxWidth="120" text="Անցնել սկիզբ" style="-fx-font-family: 'Arial AMU'" ButtonBar.buttonData="LEFT"/>
+            <Label maxWidth="70" text="Արագություն:" style="-fx-font-family: 'Arial AMU'" ButtonBar.buttonData="RIGHT"/>
+            <Slider fx:id="playSpeed" maxWidth="200.0" minorTickCount="0" showTickMarks="true" snapToTicks="true"
+                    ButtonBar.buttonData="RIGHT"/>
+            <Label fx:id="playSpeedDesc" maxWidth="20" style="-fx-padding: 0,0,0,5;" text="1x"
+                   ButtonBar.buttonData="RIGHT"/>
+        </buttons>
+    </ButtonBar>
+    <ScrollPane fx:id="background" VBox.vgrow="ALWAYS">
+        <VBox>
+            <HBox minWidth="0" VBox.vgrow="ALWAYS">
+                <ImageView fx:id="shelf1" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../image/Shelf_1.png"/>
+                </ImageView>
+                <ImageView fx:id="entry" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../image/entry.jpeg"/>
+                </ImageView>
+                <ImageView fx:id="shelf2" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../image/Shelf_2.png"/>
+                </ImageView>
+            </HBox>
+            <FlowPane fx:id="market">
+            </FlowPane>
+        </VBox>
+    </ScrollPane>
+</VBox>
